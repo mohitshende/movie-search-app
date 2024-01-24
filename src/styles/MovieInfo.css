@@ -54,14 +54,16 @@
 }
 
 .movie__genres {
-  margin: 1.25rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+  height: auto;
 }
 
 .movie__genre {
   padding: 0.5rem;
   border: 2px solid white;
   border-radius: 20px;
-  margin-right: 1rem;
 }
 
 .movie__detailRightBottom {
@@ -118,22 +120,29 @@
 
 @media screen and (max-width: 767px) {
   .movie {
-    padding: 40px 0;
+    padding: 40px 0px;
     height: 100%;
   }
 
-  .movie__backdrop {
+  .movie__intro {
     display: none;
   }
 
   .movie__detail {
     flex-direction: column;
-    margin-top: 40px;
     bottom: 0;
     width: 80%;
   }
 
   .movie__poster {
     width: 100%;
+  }
+
+  .movie__detailRight {
+    width: 100%;
+  }
+
+  .movie__detailRightBottom {
+    padding-bottom: 40px;
   }
 }
