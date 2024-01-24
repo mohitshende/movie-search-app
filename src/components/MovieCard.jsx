@@ -24,9 +24,11 @@ export default function MovieCard({ movie }) {
           {getRating(movie)} <i className="fas fa-star" />
         </p>
 
-        <p className="movie__release">
-          Release Date: {convertDateFormat(movie?.release_date)}
-        </p>
+        {movie?.release_date && (
+          <p className="movie__release">
+            Release Date: {convertDateFormat(movie?.release_date)}
+          </p>
+        )}
       </div>
     </div>
   );
