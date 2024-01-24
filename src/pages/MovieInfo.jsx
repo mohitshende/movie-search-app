@@ -47,9 +47,11 @@ export default function MovieInfo() {
               {getRating(data)} <i className="fas fa-star" />
             </div>
             <div className="movie__runtime">{data?.runtime + " mins"}</div>
-            <div className="movie__releaseDate">
-              {"Release date: " + convertDateFormat(data?.release_date)}
-            </div>
+            {data?.release_date && (
+              <div className="movie__releaseDate">
+                {"Release date: " + convertDateFormat(data?.release_date)}
+              </div>
+            )}
             <div className="movie__genres">
               {data?.genres?.map((genre) => (
                 <span className="movie__genre" key={genre.id}>
